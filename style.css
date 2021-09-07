@@ -1,0 +1,228 @@
+:root {
+ /* Primary */
+
+--Desaturated-Red: hsl(0, 36%, 70%);
+--Soft-Red: hsl(0, 93%, 68%);
+
+/* Neutral */
+
+--Dark-Grayish-Red: hsl(0, 6%, 24%);
+
+/* Gradients */
+
+--Linear1:linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+--Linear2:linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%)); 
+}
+
+/* misc 
+Some of these will also be used in JavaScript*/
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+}
+.border-error {
+    border: 1px hsl(0, 93%, 68%) solid;
+}
+.first-word {
+    font-weight: 300;
+}
+.logo-mobile {
+    display: none;
+}
+.error {
+    display: none;
+    text-align: left;
+}
+.show {
+    display: block;
+}
+
+body {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    background: url(./images/bg-pattern-desktop.svg);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+
+}
+/* first part */
+.content-container {
+    margin-top: 60px;
+    margin-left: 60px;
+}
+.content {
+    margin-top: 120px;
+}
+.main-heading {
+    font-size: 60px;
+    font-weight: 600;
+    letter-spacing: 15px;
+    text-transform: uppercase;
+}
+.red {
+    color:hsl(0, 36%, 70%);
+    margin-top: 30px;
+}
+/* The email-submission part */
+.email-container {
+    margin-top: 30px;
+    margin-right: 40px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.email-input {
+    border-radius: 25px;
+    border:1px hsl(0, 36%, 70%) solid;
+    outline: none;
+    height: 3rem;
+    width: 22rem;
+    padding-left: 20px;
+    position: relative;
+}
+.email-input::placeholder {
+    color:hsl(0, 36%, 70%);
+}
+.button {
+    height: 3.2rem;
+    width: 80px;
+    border-radius: 30px;
+    position: absolute;
+    background: url(./images/icon-arrow.svg), linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    outline: none;
+    box-shadow: 0 4px 8px 0 hsla(0, 80%, 86%, 0.9), 0 6px 20px 0 hsla(0, 74%, 74%, 0.8);
+}
+.button:hover {
+    background-image: url('./images/icon-arrow.svg'), linear-gradient(135deg, hsl(0, 0%, 90%), hsl(0, 100%, 86%));
+    box-shadow: 0 4px 8px 0 hsla(0, 0%, 90%, 0.9), 0 6px 20px 0 hsla(0, 100%, 86%, 0.8);
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    height: 3.4rem; 
+}
+.error-icon {
+    position: absolute;
+    margin-left: -5.5rem;
+}
+.error-message {
+    margin-top: 10px;
+    margin-left: 20px;
+    color:hsl(0, 93%, 68%);
+}
+/* The image on the right */
+.image-container {
+    width: 40%;
+    height: 100vh;
+    background-image: url('./images/hero-desktop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.bottom-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+/* The footer details */
+.attribution {
+    margin: 10px;
+    font-size: 11px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+    text-decoration: none;
+}
+.profile-image {
+    width: 32px;
+    border-radius: 50%;
+    margin-left: 5px;
+}
+/* These are the screen sizes for different screens where the website could be viewed */
+@media screen and (max-width: 545px){
+    body {
+        flex-direction: column;
+        justify-content: center;
+        overflow: visible;
+    }
+    .content-container {
+        margin-left: 20px;
+        margin-right: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .content {
+        margin-top: 50px;
+        text-align: center;
+    }
+    .main-heading {
+        font-size: 45px;
+    }
+    .image-container {
+        display: none;
+    }
+    .error-message {
+        align-self: flex-start;
+    }
+    .email-input {
+        width: 18rem;
+        align-self: center;
+        margin-right: 0px;
+    }
+    .button {
+        width: 70px;
+    }
+    .mobile-image {
+        width: 100%;
+        height: 50vh;
+        background-image: url('./images/hero-mobile.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .logo {
+        display: none;
+    }
+    .logo-mobile {
+        display: flex;
+        margin: 20px;
+        justify-content: flex-start;
+    }
+
+}
+
+@media screen and (max-width: 400px)
+{
+    .email-container{
+        margin: 60px 30px 10px 30px;
+    }
+    .bottom-container {
+        align-items: center;
+    }
+    .error-icon {
+        margin-left: -5rem;
+    }
+    .error-message {
+        margin-left: 60px;
+    }
+    .button {
+        margin-left: 20px;
+    }
+    .attribution {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+}
+

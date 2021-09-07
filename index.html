@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Frontend Mentor | Base-apparel-coming-soon-master</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+</head>
+
+<body>
+    <div class="logo-mobile"><img src="./images/logo.svg" alt="logo-mobile"></div>
+    <div class="mobile-image"></div>
+    <div class="content-container">
+        <img src="./images/logo.svg" alt="Logo" class="logo">
+        <div class="content">
+            <h1 class="main-heading"> <span class="main-heading red first-word">We're</span><br>Coming<br>Soon</h1>
+            <p class="red">Hello fellow shoppers! We're currently building our new<br> fasion store. Add your email
+                below and stay
+                up-to-date with <br> announcements and our launch deals.</p>
+        </div>
+        <div class="bottom-container">
+            <div class="email-container">
+                <input type="Email" placeholder="Email Address" class="email-input">
+                <img src="./images/icon-error.svg" alt="Error icon" class="error-icon error">
+                <input type="button" name="submit" class="button" onclick="valEmail()">
+            </div>
+            <p class="error-message error">Please provide a valid email</p>
+            <p class="attribution">
+                Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"> Frontend Mentor</a>.
+                Coded by <a href="https://www.frontendmentor.io/profile/tesla-ambassador"><img
+                        src="./images/profile@3x.png" alt="Profile" class="profile-image"></a>.
+            </p>
+        </div>
+    </div>
+    <div class="image-container"></div>
+    <script src="./main.js"></script>
+</body>
+
+</html>
